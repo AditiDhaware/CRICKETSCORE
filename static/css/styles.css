@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.score-section, .control-section {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 10px;
+}

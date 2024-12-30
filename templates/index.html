@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrickScore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<div id="admin-view">
+    <div class="container">
+        <h1>Admin View</h1>
+        <div class="score-section">
+            <h3>Current Score: <span id="current-score">0/0</span></h3>
+        </div>
+        <div class="control-section">
+            <button class="btn btn-primary" onclick="updateScore(1)">1 Run</button>
+            <button class="btn btn-danger" onclick="updateScore(0, true)">Wicket</button>
+        </div>
+    </div>
+</div>
+
+<div id="user-view">
+    <div class="container">
+        <h1>User View</h1>
+        <div id="real-time-score">
+            <h3>Current Score: <span id="user-score">0/0</span></h3>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.0.1/dist/socket.io.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
